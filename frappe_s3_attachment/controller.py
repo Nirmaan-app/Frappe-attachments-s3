@@ -115,11 +115,11 @@ class S3Operations(object):
                 self.S3_CLIENT.upload_file(
                     file_path, self.BUCKET, key,
                     ExtraArgs={
-                        "ContentType": content_type,
-                        "Metadata": {
-                            "ContentType": content_type,
-                            "file_name": file_name
-                        }
+                        "ContentType": content_type
+                        # "Metadata": {
+                        #     "ContentType": content_type,
+                        #     "file_name": file_name
+                        # }
                     }
                 )
             else:
